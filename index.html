@@ -8,52 +8,57 @@
   <meta name="author" content="Hayran Rani">
   <title>Selamat Datang di hayran.sbs</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(120deg, #4facfe, #00f2fe);
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
+ <style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* 🌊 Gradasi biru tua → biru muda */
+    background: linear-gradient(135deg, #001f4d, #004aad, #007bff, #a3d5ff);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
 
-    h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.5rem;
-    }
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
 
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
 
-    a.button {
-      text-decoration: none;
-      background-color: #fff;
-      color: #0077ff;
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
+  h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
 
-    a.button:hover {
-      background-color: #0077ff;
-      color: #fff;
-    }
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #e0f7ff;
+  }
 
-    footer {
-      position: absolute;
-      bottom: 10px;
-      font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.8);
-    }
-  </style>
+  a {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  a:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+  }
+</style>
+
 </head>
 
 <body>
