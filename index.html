@@ -30,7 +30,6 @@
       position: relative;
     }
 
-    /* 🌊 Lapisan ombak lembut */
     .wave-layer {
       position: absolute;
       top: 0; left: 0;
@@ -51,7 +50,6 @@
       100% { transform: translate(0, 0) rotate(360deg); }
     }
 
-    /* Efek muncul saat load */
     .fade-up {
       opacity: 0;
       transform: translateY(40px);
@@ -73,7 +71,6 @@
       }
     }
 
-    /* 🖼️ Logo */
     .logo {
       position: relative;
       z-index: 2;
@@ -85,7 +82,6 @@
       transform-style: preserve-3d;
     }
 
-    /* ✨ Huruf dengan efek 3D */
     h1, p {
       position: relative;
       z-index: 2;
@@ -165,7 +161,6 @@
   <footer>© 2025 hayran.sbs — All Rights Reserved</footer>
 
   <script>
-    /* 🌈 Efek background mengikuti mouse */
     let targetX = 50, targetY = 50;
     let currentX = 50, currentY = 50;
     const smoothing = 0.08;
@@ -188,7 +183,6 @@
     }
     animateBackground();
 
-    /* 🌀 Efek 3D Cinematic untuk teks & logo */
     const logo = document.querySelector(".logo");
     const title = document.getElementById("judul");
     const desc = document.getElementById("deskripsi");
@@ -203,7 +197,6 @@
       desc.style.transform = `rotateY(${rotateY * 0.4}deg) rotateX(${rotateX * 0.4}deg) translateZ(5px)`;
     });
 
-    /* ✨ Huruf interaktif */
     function wrapTextWithSpans(element) {
       const text = element.innerHTML;
       element.innerHTML = text.replace(/(.)/g, "<span class='char'>$1</span>");
