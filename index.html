@@ -9,32 +9,34 @@
   <title>Selamat Datang di websitenya Haydar dan Rani hayran.sbs</title>
 
   <style>
+   
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #000a2e, #002a6e, #0047b3, #009dff);
-      background-size: 400% 400%;
-      animation: gradientShift 20s ease infinite;
-
-      color: #ffffff;
+      height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
       text-align: center;
+      color: #ffffff;
       overflow: hidden;
       position: relative;
+      background: linear-gradient(135deg, #000a2e, #002a6e, #0047b3, #009dff);
+      background-size: 200% 200%;
+      animation: gradientShift 25s ease infinite;
     }
 
-    /* 🌊 Efek gradasi bergerak */
+  
     @keyframes gradientShift {
       0% { background-position: 0% 50%; }
+      25% { background-position: 50% 100%; }
       50% { background-position: 100% 50%; }
+      75% { background-position: 50% 0%; }
       100% { background-position: 0% 50%; }
     }
 
-    /* 🌊 Lapisan tambahan agar terlihat seperti air berombak */
+   
     body::before {
       content: "";
       position: absolute;
@@ -42,39 +44,35 @@
       left: 0;
       width: 200%;
       height: 200%;
-      background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.05), transparent 25%),
-                  radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.03), transparent 25%),
-                  radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.04), transparent 30%);
-      animation: waveMove 30s linear infinite;
-      transform: translate(-25%, -25%);
+      background: 
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.04) 0%, transparent 70%),
+        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+      animation: waveFlow 40s linear infinite;
       z-index: 0;
     }
 
-    @keyframes waveMove {
-      0% { transform: translate(-25%, -25%) rotate(0deg); }
-      50% { transform: translate(-20%, -30%) rotate(180deg); }
-      100% { transform: translate(-25%, -25%) rotate(360deg); }
+    @keyframes waveFlow {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      50% { transform: translate(-10%, -5%) rotate(180deg); }
+      100% { transform: translate(0, 0) rotate(360deg); }
     }
 
-    h1, p, a.button {
+  
+    h1, p, a.button, footer {
       position: relative;
       z-index: 1;
-      opacity: 0;
-      animation: fadeIn 1.5s ease forwards;
     }
 
     h1 {
       font-size: 2.8rem;
       margin-bottom: 0.5rem;
       text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
-      animation-delay: 0.2s;
     }
 
     p {
       font-size: 1.2rem;
       margin-bottom: 1.5rem;
       color: #e6f2ff;
-      animation-delay: 0.6s;
     }
 
     a.button {
@@ -87,7 +85,6 @@
       letter-spacing: 0.5px;
       transition: all 0.3s ease;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      animation-delay: 1s;
     }
 
     a.button:hover {
@@ -101,15 +98,6 @@
       bottom: 10px;
       font-size: 0.9rem;
       color: rgba(255, 255, 255, 0.75);
-      z-index: 1;
-      animation: fadeIn 2s ease forwards;
-      animation-delay: 1.4s;
-    }
-
-    /* ✨ Efek muncul halus */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
