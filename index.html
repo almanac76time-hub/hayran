@@ -9,7 +9,6 @@
   <title>Selamat Datang di websitenya Haydar dan Rani | hayran.sbs</title>
 
   <style>
-  
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -22,24 +21,17 @@
       color: #ffffff;
       overflow: hidden;
       position: relative;
-      background: linear-gradient(135deg, #000a2e, #002a6e, #0047b3, #009dff);
-      background-size: 200% 200%;
-      animation: gradientShift 25s ease infinite;
+
+ 
+      background: radial-gradient(circle at center, #009dff, #002a6e, #000a2e);
+      transition: background 0.2s ease;
     }
 
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      25% { background-position: 50% 100%; }
-      50% { background-position: 100% 50%; }
-      75% { background-position: 50% 0%; }
-      100% { background-position: 0% 50%; }
-    }
-
+ 
     body::before {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       width: 200%;
       height: 200%;
       background:
@@ -47,6 +39,7 @@
         radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
       animation: waveFlow 40s linear infinite;
       z-index: 0;
+      pointer-events: none;
     }
 
     @keyframes waveFlow {
@@ -128,5 +121,20 @@
   <a href="https://github.com/almanac76time-hub/hayran" class="button" target="_blank">Lihat Repository di GitHub</a>
 
   <footer>© 2025 hayran.sbs — All Rights Reserved</footer>
+
+  <script>
+
+    document.addEventListener('mousemove', (e) => {
+      const x = e.clientX / window.innerWidth * 100;
+      const y = e.clientY / window.innerHeight * 100;
+      
+      document.body.style.background = `
+        radial-gradient(circle at ${x}% ${y}%, 
+          rgba(0, 157, 255, 0.9), 
+          rgba(0, 42, 110, 0.9), 
+          rgba(0, 10, 46, 1))
+      `;
+    });
+  </script>
 </body>
 </html>
