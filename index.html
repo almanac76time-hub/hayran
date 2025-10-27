@@ -1,113 +1,61 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Website resmi hayran.sbs — dibuat menggunakan GitHub Pages dan DomaiNesia.">
-  <meta name="keywords" content="hayran, github pages, website, domainesia, almanac76time-hub">
-  <meta name="author" content="Hayran Rani">
-  <title>Selamat Datang di websitenya Haydar dan Rani hayran.sbs</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    background: linear-gradient(135deg, #000a2e, #002a6e, #0047b3, #009dff);
+    background-size: 400% 400%;
+    animation: gradientShift 20s ease infinite;
 
-  <style>
-   
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: #ffffff;
-      overflow: hidden;
-      position: relative;
-      background: linear-gradient(135deg, #000a2e, #002a6e, #0047b3, #009dff);
-      background-size: 200% 200%;
-      animation: gradientShift 25s ease infinite;
-    }
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
 
-  
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      25% { background-position: 50% 100%; }
-      50% { background-position: 100% 50%; }
-      75% { background-position: 50% 0%; }
-      100% { background-position: 0% 50%; }
-    }
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
 
-   
-    body::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 200%;
-      height: 200%;
-      background: 
-        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.04) 0%, transparent 70%),
-        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
-      animation: waveFlow 40s linear infinite;
-      z-index: 0;
-    }
+  h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+  }
 
-    @keyframes waveFlow {
-      0% { transform: translate(0, 0) rotate(0deg); }
-      50% { transform: translate(-10%, -5%) rotate(180deg); }
-      100% { transform: translate(0, 0) rotate(360deg); }
-    }
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #e6f2ff;
+  }
 
-  
-    h1, p, a.button, footer {
-      position: relative;
-      z-index: 1;
-    }
+  a.button {
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    padding: 12px 26px;
+    border-radius: 10px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
 
-    h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.5rem;
-      text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
-    }
+  a.button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  }
 
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
-      color: #e6f2ff;
-    }
-
-    a.button {
-      text-decoration: none;
-      background-color: rgba(255, 255, 255, 0.15);
-      color: #ffffff;
-      padding: 12px 26px;
-      border-radius: 10px;
-      font-weight: bold;
-      letter-spacing: 0.5px;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    a.button:hover {
-      background-color: rgba(255, 255, 255, 0.3);
-      transform: scale(1.05);
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
-    }
-
-    footer {
-      position: absolute;
-      bottom: 10px;
-      font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.75);
-    }
-  </style>
-</head>
-
-<body>
-  <h1>🌐 Selamat Datang di websitenya Haydar dan Rani <span style="color:#fff700;">hayran.sbs</span></h1>
-  <p>Website ini berhasil di-host menggunakan <strong>GitHub Pages</strong> dan <strong>DomaiNesia</strong>.</p>
-
-  <a href="https://github.com/almanac76time-hub/hayran" class="button" target="_blank">Lihat Repository di GitHub</a>
-
-  <footer>© 2025 hayran.sbs — All Rights Reserved</footer>
-</body>
-</html>
+  footer {
+    position: absolute;
+    bottom: 10px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.75);
+  }
+</style>
